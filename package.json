@@ -55,9 +55,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "peerDependencies": {
-    "@anthropic/claude-code": ">=1.0.0"
-  },
   "dependencies": {
     "yaml": "^2.3.4",
     "commander": "^11.0.0",
