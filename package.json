@@ -1,6 +1,6 @@
 {
   "name": "tanuki-exam-prep-agents",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "AI-powered certification exam preparation system with adaptive learning, BMAD agent integration, and progress tracking. Built for RIMS-CRMP and extensible to other certifications.",
   "main": "src/index.js",
   "bin": {
