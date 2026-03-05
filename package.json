@@ -1,0 +1,75 @@
+{
+  "name": "tanuki-exam-prep-agents",
+  "version": "1.0.0",
+  "description": "AI-powered certification exam preparation system with adaptive learning, BMAD agent integration, and progress tracking. Built for RIMS-CRMP and extensible to other certifications.",
+  "main": "src/index.js",
+  "bin": {
+    "exam-prep": "./bin/cli.js",
+    "exam-prep-installer": "./bin/installer.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:unit": "jest --testMatch='**/*.unit.test.js'",
+    "test:integration": "jest --testMatch='**/*.integration.test.js'",
+    "lint": "eslint src/ bin/"
+  },
+  "keywords": [
+    "exam",
+    "certification",
+    "study",
+    "ai",
+    "rims",
+    "crmp",
+    "risk-management",
+    "exam-prep",
+    "test-prep",
+    "certification-exam",
+    "adaptive-learning",
+    "study-guide",
+    "quiz",
+    "progress-tracking",
+    "claude",
+    "ai-tutor",
+    "bmad"
+  ],
+  "author": {
+    "name": "Henry Tano",
+    "email": "henry@example.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tigeroid/tanuki-exam-prep-agents.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tigeroid/tanuki-exam-prep-agents/issues"
+  },
+  "homepage": "https://github.com/tigeroid/tanuki-exam-prep-agents#readme",
+  "files": [
+    "bin/",
+    "src/",
+    "exams/",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@anthropic/claude-code": ">=1.0.0"
+  },
+  "dependencies": {
+    "yaml": "^2.3.4",
+    "commander": "^11.0.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "inquirer": "^8.2.5"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "eslint": "^8.42.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

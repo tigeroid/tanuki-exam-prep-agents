@@ -1,0 +1,44 @@
+code: sample
+name: Sample Certification Exam
+format:
+  total_questions: 100
+  passing_score: 70
+  question_type: multiple-choice-4
+  time_limit_minutes: 120
+
+domains:
+  - code: DOMAIN1
+    name: First Domain
+    weight: 40
+    description: This is the first domain covering basic concepts
+
+  - code: DOMAIN2
+    name: Second Domain
+    weight: 35
+    description: This is the second domain covering intermediate topics
+
+  - code: DOMAIN3
+    name: Third Domain
+    weight: 25
+    description: This is the third domain covering advanced topics
+
+resources:
+  - domain: DOMAIN1
+    type: official
+    title: Official Guide Chapter 1-3
+    url: https://example.com/guide/ch1-3
+
+  - domain: DOMAIN1
+    type: practice
+    title: Practice Questions Set A
+    url: https://example.com/practice/set-a
+
+  - domain: DOMAIN2
+    type: official
+    title: Official Guide Chapter 4-6
+    url: https://example.com/guide/ch4-6
+
+  - domain: DOMAIN3
+    type: video
+    title: Advanced Topics Video Series
+    url: https://example.com/videos/advanced

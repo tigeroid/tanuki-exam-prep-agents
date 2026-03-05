@@ -1,0 +1,204 @@
+# RIMS-CRMP (Certified Risk Management Professional) Exam Configuration
+# Based on official exam structure and course materials
+
+code: rims-crmp
+name: RIMS-CRMP Certification
+
+format:
+  total_questions: 100  # 100 scored questions (+ 20 unscored pretest items not included in final score)
+  passing_score: 71    # 71% required to pass
+  question_type: multiple-choice-4  # 4 options per question, single best answer
+  time_limit_minutes: 120  # 120 minutes (2 hours)
+
+# Five RIMS-CRMP Domains (weights must sum to 100%)
+domains:
+  - code: domain-a
+    name: Analyzing the Organizational Risk Model
+    description: Understand organizational context, risk models, and enterprise risk assessment frameworks including COSO ERM, ISO 31000, and risk appetite concepts
+    weight: 16
+
+  - code: domain-b
+    name: Designing Risk Management Strategies
+    description: Design risk treatment strategies, develop risk appetite frameworks, and create comprehensive risk management approaches aligned with organizational objectives
+    weight: 26
+
+  - code: domain-c
+    name: Implementing Risk Management Processes
+    description: Execute risk management processes, implement controls, monitor KRIs/KPIs, and maintain risk registers and reporting systems (32% - highest weighted domain)
+    weight: 32
+
+  - code: domain-d
+    name: Developing Risk Competency
+    description: Build risk culture, develop training programs, establish governance structures, and promote risk awareness across the organization
+    weight: 16
+
+  - code: domain-e
+    name: Supporting Decision Making
+    description: Provide risk-informed insights to support strategic and operational decision-making, including scenario analysis and risk reporting
+    weight: 10
+
+# Resources mapped to domains
+# Note: Set the EXAM_PREP_RESOURCES environment variable to the directory containing your study materials
+# Example: export EXAM_PREP_RESOURCES="/Users/yourname/rims-study-materials"
+# Or create a directory at ~/exam-prep-resources/ or ./resources/
+resources:
+  # Domain A - Analyzing the Organizational Risk Model
+  - domain: domain-a
+    type: study-guide
+    title: Official RIMS-CRMP Study Guide 2025
+    path: ${EXAM_PREP_RESOURCES}/RIMS-CRMP-Study-Guide-2025.pdf
+
+  - domain: domain-a
+    type: lecture
+    title: Risk Management in Context and Risk Tolerance
+    path: ${EXAM_PREP_RESOURCES}/Module 1/01_Lecture Notes/Session 1 and 2 RM in context and risk tolerance March 2025.pdf
+
+  - domain: domain-a
+    type: lecture
+    title: ISO 31000 and COSO ERM Frameworks
+    path: ${EXAM_PREP_RESOURCES}/Module 1/01_Lecture Notes/Session 4 ISO and COSO March 2025.pdf
+
+  - domain: domain-a
+    type: reference
+    title: COSO ERM - Creating and Protecting Value
+    path: ${EXAM_PREP_RESOURCES}/Module 2/02_Reports/COSO-ERM-Creating-and-Protecting-Value.pdf
+
+  - domain: domain-a
+    type: quick-reference
+    title: Master Reference Sheet
+    path: ${EXAM_PREP_RESOURCES}/Cheat Sheets/RIMS-CRMP-Master-Reference.md
+
+  # Domain B - Designing Risk Management Strategies
+  - domain: domain-b
+    type: study-guide
+    title: Official RIMS-CRMP Study Guide 2025
+    path: ${EXAM_PREP_RESOURCES}/RIMS-CRMP-Study-Guide-2025.pdf
+
+  - domain: domain-b
+    type: lecture
+    title: Risk Management Strategies - Part 1
+    path: ${EXAM_PREP_RESOURCES}/Module 2/01_Lecture Notes/Module 2-Part1.pdf
+
+  - domain: domain-b
+    type: lecture
+    title: Risk Management Strategies - Part 2
+    path: ${EXAM_PREP_RESOURCES}/Module 2/01_Lecture Notes/Module 2-Part2.pdf
+
+  - domain: domain-b
+    type: reference
+    title: COSO Risk Appetite - Critical to Success
+    path: ${EXAM_PREP_RESOURCES}/Module 2/02_Reports/COSO-Guidance-Risk-Appetite-Critical-to-Success.pdf
+
+  - domain: domain-b
+    type: reference
+    title: COSO ERM Risk Assessment in Practice
+    path: ${EXAM_PREP_RESOURCES}/Module 2/02_Reports/COSO-ERM-Risk-Assessment-in-Practice-Thought-Paper-October-2012.pdf
+
+  - domain: domain-b
+    type: case-study
+    title: Strategy Design Case - Fruit Juice Company
+    path: ${EXAM_PREP_RESOURCES}/Module 2/03_Case Studies/Case Study 1 - Fruit Juice Company.pdf
+
+  # Domain C - Implementing Risk Management Processes (highest weight: 32%)
+  - domain: domain-c
+    type: study-guide
+    title: Official RIMS-CRMP Study Guide 2025
+    path: ${EXAM_PREP_RESOURCES}/RIMS-CRMP-Study-Guide-2025.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Implementation Fundamentals - Part 1
+    path: ${EXAM_PREP_RESOURCES}/Module 3/01_Lecture Notes/3.1.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Implementation Fundamentals - Part 2
+    path: ${EXAM_PREP_RESOURCES}/Module 3/01_Lecture Notes/3.2.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Implementation Fundamentals - Part 3
+    path: ${EXAM_PREP_RESOURCES}/Module 3/01_Lecture Notes/3.3.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Implementation Fundamentals - Part 4
+    path: ${EXAM_PREP_RESOURCES}/Module 3/01_Lecture Notes/3.4.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Key Risk Indicators (KRIs) and KPIs
+    path: ${EXAM_PREP_RESOURCES}/Module 1/01_Lecture Notes/Session 3 RKI_s KPI_s March 25.pdf
+
+  - domain: domain-c
+    type: lecture
+    title: Perspectives on ERM Implementation
+    path: ${EXAM_PREP_RESOURCES}/Module 1/01_Lecture Notes/Session 5 Perspective on Implementation March 2025.pdf
+
+  - domain: domain-c
+    type: reference
+    title: ERM Implementation Tools and Techniques
+    path: ${EXAM_PREP_RESOURCES}/Module 2/02_Reports/Enterprise Risk Management-Tools and Techniques for Implementation_Part II.pdf
+
+  - domain: domain-c
+    type: case-study
+    title: DBS Bank Risk Management Implementation
+    path: ${EXAM_PREP_RESOURCES}/Module 3/02_Case Studies/DBS Risk Management.pdf
+
+  # Domain D - Developing Risk Competency
+  - domain: domain-d
+    type: study-guide
+    title: Official RIMS-CRMP Study Guide 2025
+    path: ${EXAM_PREP_RESOURCES}/RIMS-CRMP-Study-Guide-2025.pdf
+
+  - domain: domain-d
+    type: case-study
+    title: Risk Culture Development Case Study
+    path: ${EXAM_PREP_RESOURCES}/Module 2/03_Case Studies/Case Study 2 - Big Aspirations.pdf
+
+  - domain: domain-d
+    type: case-study
+    title: Chief Risk Officer Governance and Leadership
+    path: ${EXAM_PREP_RESOURCES}/Module 3/02_Case Studies/DBS CRO Statement.pdf
+
+  - domain: domain-d
+    type: quick-reference
+    title: Three Lines of Defense and Governance Models
+    path: ${EXAM_PREP_RESOURCES}/Cheat Sheets/RIMS-CRMP-Master-Reference.md
+
+  # Domain E - Supporting Decision Making
+  - domain: domain-e
+    type: study-guide
+    title: Official RIMS-CRMP Study Guide 2025
+    path: ${EXAM_PREP_RESOURCES}/RIMS-CRMP-Study-Guide-2025.pdf
+
+  - domain: domain-e
+    type: case-study
+    title: HM Treasury Orange Book - Risk-Informed Decision Making
+    path: ${EXAM_PREP_RESOURCES}/Module 3/02_Case Studies/HMT_Orange_Book_May_2023.pdf
+
+  - domain: domain-e
+    type: case-study
+    title: Enterprise Risk Reporting for Decision Support
+    path: ${EXAM_PREP_RESOURCES}/Module 3/02_Case Studies/University of California, Risk Report.pdf
+
+  - domain: domain-e
+    type: reference
+    title: COSO ESG and ERM Guidance for Strategic Decisions
+    path: ${EXAM_PREP_RESOURCES}/Module 2/02_Reports/COSO-WBCSD-ESGERM-Guidance-Full.pdf
+
+  # Quick reference materials (cross-domain)
+  - domain: all
+    type: quick-reference
+    title: Comprehensive Exam Reference
+    path: ${EXAM_PREP_RESOURCES}/Cheat Sheets/RIMS-CRMP-Master-Reference.md
+
+  - domain: all
+    type: quick-reference
+    title: Flashcards for Rapid Review
+    path: ${EXAM_PREP_RESOURCES}/Cheat Sheets/RIMS-CRMP-Flashcards.md
+
+  - domain: all
+    type: quick-reference
+    title: Exam Day Quick Reference
+    path: ${EXAM_PREP_RESOURCES}/Cheat Sheets/EXAM-DAY-QUICK-REFERENCE.md

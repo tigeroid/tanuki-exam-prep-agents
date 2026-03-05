@@ -1,0 +1,186 @@
+# IT Project Management Professional (ITPMP) Exam Configuration
+# Generic certification template demonstrating plugin flexibility
+
+code: itpmp
+name: IT Project Management Professional
+
+format:
+  total_questions: 150  # Longer exam than RIMS
+  passing_score: 65    # Different passing threshold
+  question_type: multiple-choice-4  # 4 options per question
+  time_limit_minutes: 180  # 3 hours
+
+# Four ITPMP Domains (different structure than RIMS' 5 domains)
+# Weights must sum to 100%
+domains:
+  - code: initiation-planning
+    name: Project Initiation and Planning
+    description: Define project objectives, develop comprehensive project plans, establish scope, schedule, budget, and resource allocations. Includes stakeholder identification and requirements gathering.
+    weight: 30
+
+  - code: execution-delivery
+    name: Project Execution and Delivery
+    description: Lead project teams, manage resources, implement quality assurance processes, and deliver project outputs according to plan. Coordinate cross-functional teams and manage vendor relationships.
+    weight: 35
+
+  - code: monitoring-control
+    name: Monitoring and Control
+    description: Track project performance, manage changes, control scope creep, monitor risks and issues, and ensure projects stay on track. Implement earned value management and performance metrics.
+    weight: 25
+
+  - code: closure-optimization
+    name: Project Closure and Continuous Improvement
+    description: Formalize project acceptance, conduct lessons learned sessions, archive project documentation, and implement continuous improvement processes for future projects.
+    weight: 10
+
+# Resources demonstrating different organizational patterns
+resources:
+  # Initiation and Planning Domain (30%)
+  - domain: initiation-planning
+    type: study-guide
+    title: ITPMP Official Study Guide
+    path: /path/to/study-guides/ITPMP-Study-Guide.pdf
+
+  - domain: initiation-planning
+    type: textbook
+    title: Project Management Body of Knowledge (PMBOK)
+    path: /path/to/textbooks/PMBOK-Guide-7th-Edition.pdf
+
+  - domain: initiation-planning
+    type: video-series
+    title: Project Planning Fundamentals Video Course
+    path: /path/to/videos/planning-fundamentals/
+
+  - domain: initiation-planning
+    type: practice-exam
+    title: Initiation & Planning Practice Questions (50 items)
+    path: /path/to/practice/initiation-planning-questions.pdf
+
+  - domain: initiation-planning
+    type: template
+    title: Project Charter Template
+    path: /path/to/templates/project-charter-template.docx
+
+  - domain: initiation-planning
+    type: template
+    title: Work Breakdown Structure (WBS) Template
+    path: /path/to/templates/wbs-template.xlsx
+
+  # Execution and Delivery Domain (35% - highest)
+  - domain: execution-delivery
+    type: study-guide
+    title: ITPMP Official Study Guide
+    path: /path/to/study-guides/ITPMP-Study-Guide.pdf
+
+  - domain: execution-delivery
+    type: textbook
+    title: Agile Practice Guide
+    path: /path/to/textbooks/Agile-Practice-Guide.pdf
+
+  - domain: execution-delivery
+    type: video-series
+    title: Team Leadership and Communication
+    path: /path/to/videos/team-leadership/
+
+  - domain: execution-delivery
+    type: case-study
+    title: Enterprise Software Implementation Case
+    path: /path/to/case-studies/enterprise-software-implementation.pdf
+
+  - domain: execution-delivery
+    type: case-study
+    title: IT Infrastructure Migration Project
+    path: /path/to/case-studies/infrastructure-migration.pdf
+
+  - domain: execution-delivery
+    type: practice-exam
+    title: Execution & Delivery Practice Questions (75 items)
+    path: /path/to/practice/execution-delivery-questions.pdf
+
+  - domain: execution-delivery
+    type: reference
+    title: Scrum Guide for Agile Projects
+    path: /path/to/reference/scrum-guide.pdf
+
+  - domain: execution-delivery
+    type: template
+    title: Sprint Planning Template
+    path: /path/to/templates/sprint-planning.xlsx
+
+  # Monitoring and Control Domain (25%)
+  - domain: monitoring-control
+    type: study-guide
+    title: ITPMP Official Study Guide
+    path: /path/to/study-guides/ITPMP-Study-Guide.pdf
+
+  - domain: monitoring-control
+    type: textbook
+    title: Earned Value Management Guide
+    path: /path/to/textbooks/EVM-Handbook.pdf
+
+  - domain: monitoring-control
+    type: video-series
+    title: Performance Metrics and KPIs
+    path: /path/to/videos/performance-metrics/
+
+  - domain: monitoring-control
+    type: practice-exam
+    title: Monitoring & Control Practice Questions (60 items)
+    path: /path/to/practice/monitoring-control-questions.pdf
+
+  - domain: monitoring-control
+    type: reference
+    title: Change Management Framework
+    path: /path/to/reference/change-management-framework.pdf
+
+  - domain: monitoring-control
+    type: template
+    title: Status Report Template
+    path: /path/to/templates/status-report-template.pptx
+
+  - domain: monitoring-control
+    type: template
+    title: Risk Register Template
+    path: /path/to/templates/risk-register.xlsx
+
+  # Closure and Optimization Domain (10%)
+  - domain: closure-optimization
+    type: study-guide
+    title: ITPMP Official Study Guide
+    path: /path/to/study-guides/ITPMP-Study-Guide.pdf
+
+  - domain: closure-optimization
+    type: video-series
+    title: Lessons Learned and Knowledge Transfer
+    path: /path/to/videos/lessons-learned/
+
+  - domain: closure-optimization
+    type: practice-exam
+    title: Closure & Optimization Practice Questions (30 items)
+    path: /path/to/practice/closure-optimization-questions.pdf
+
+  - domain: closure-optimization
+    type: template
+    title: Project Closure Checklist
+    path: /path/to/templates/closure-checklist.docx
+
+  - domain: closure-optimization
+    type: template
+    title: Lessons Learned Template
+    path: /path/to/templates/lessons-learned-template.docx
+
+  # Cross-domain resources
+  - domain: all
+    type: quick-reference
+    title: ITPMP Formulas and Key Concepts
+    path: /path/to/quick-ref/formulas-cheat-sheet.pdf
+
+  - domain: all
+    type: quick-reference
+    title: Process Groups Quick Reference
+    path: /path/to/quick-ref/process-groups.pdf
+
+  - domain: all
+    type: flashcards
+    title: ITPMP Exam Flashcards (500 cards)
+    path: /path/to/flashcards/itpmp-flashcards.pdf

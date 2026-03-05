@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+*.log
+.DS_Store
+user-data/
+.exam-prep-config
+.exam-prep-prompts/
+test-fixtures/generated/
