@@ -102,7 +102,8 @@ function buildQuizContext(examCode, options = {}) {
   const {
     domain = null,
     questionCount = 10,
-    focusWeak = true
+    focusWeak = true,
+    batchInfo = null
   } = options;
 
   // Load exam configuration
@@ -163,6 +164,21 @@ function buildQuizContext(examCode, options = {}) {
     }
   });
 
+  // Build additional notes with batch information
+  let additionalNotes;
+  if (batchInfo) {
+    additionalNotes = `Full RIMS-CRMP Exam Simulation - Batch ${batchInfo.currentBatch} of ${batchInfo.totalBatches}\n` +
+      `This is part of a ${batchInfo.totalQuestions}-question exam simulation.\n` +
+      `Generate ${questionCount} questions for this batch.\n` +
+      `Note: Batched to work within Claude Code output token limits.`;
+  } else {
+    additionalNotes = focusWeak && weakAreas.length > 0
+      ? `Focusing on weak areas: ${weakAreas.map(a => a.domainName).join(', ')}`
+      : domain
+        ? `Specific domain quiz: ${examContext.domainMap[domain]?.name || domain}`
+        : 'Comprehensive quiz across all domains';
+  }
+
   return {
     examConfig: {
       code: exam.code,
@@ -181,16 +197,13 @@ function buildQuizContext(examCode, options = {}) {
       questionCount: questionCount,
       focusWeak: focusWeak,
       difficulty: progressSummary.quizAverage >= 80 ? 'hard' :
-                  progressSummary.quizAverage >= 70 ? 'medium' : 'easy'
+                  progressSummary.quizAverage >= 70 ? 'medium' : 'easy',
+      batchInfo: batchInfo  // Include batch information if present
     },
     weakAreas: weakAreas,
     recentSessions: recentSessions,
     relevantResources: relevantResources,
-    additionalNotes: focusWeak && weakAreas.length > 0
-      ? `Focusing on weak areas: ${weakAreas.map(a => a.domainName).join(', ')}`
-      : domain
-        ? `Specific domain quiz: ${examContext.domainMap[domain]?.name || domain}`
-        : 'Comprehensive quiz across all domains'
+    additionalNotes: additionalNotes
   };
 }
 

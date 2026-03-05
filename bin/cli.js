@@ -16,7 +16,8 @@ program
 program
   .command('quiz')
   .description('Generate quiz')
-  .option('--quick', 'Quick quiz')
+  .option('--quick', 'Quick quiz (10 questions)')
+  .option('--full-exam', 'Full RIMS exam simulation (100 questions in 4 batches)')
   .action((opts) => {
     require('../src/cli/commands/quiz').execute(opts);
   });

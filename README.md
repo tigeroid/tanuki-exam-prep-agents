@@ -76,11 +76,23 @@ This generates a prompt file you paste into Claude. Alvin will:
 ### 4. Test yourself with Simon
 
 ```bash
+# Quick practice (10 questions)
 exam-prep quiz --quick
+
+# Regular practice (20 questions)
+exam-prep quiz
+
+# Full exam simulation (100 scored questions in 4 batches)
+exam-prep quiz --full-exam
 ```
 
 Simon generates practice quizzes:
-- 10 questions (quick) or 20 questions (full)
+- **Quick**: 10 questions for rapid practice
+- **Regular**: 20 questions for focused practice
+- **Full Exam**: 100 scored questions in 4×25 batches
+  - Simulates the real RIMS-CRMP exam experience
+  - Batched to work within Claude Code output token limits
+  - Take breaks between batches like the real exam!
 - Automatically targets your weak domains
 - Mimics real exam format and difficulty
 
@@ -107,10 +119,12 @@ View your study hours, quiz history, domain mastery, and exam readiness.
 ## Commands
 
 ```bash
-exam-prep study [domain]       # Start study session with Alvin
-exam-prep quiz [--quick]       # Generate practice quiz with Simon
-exam-prep evaluate             # Analyze quiz results with Theodore
-exam-prep progress             # View your study progress
+exam-prep study [domain]           # Start study session with Alvin
+exam-prep quiz                     # Generate 20-question practice quiz
+exam-prep quiz --quick             # Generate 10-question quick quiz
+exam-prep quiz --full-exam         # Generate full exam (100 questions in 4 batches)
+exam-prep evaluate                 # Analyze quiz results with Theodore
+exam-prep progress                 # View your study progress
 ```
 
 ## Supported Certifications
@@ -118,7 +132,7 @@ exam-prep progress             # View your study progress
 ### RIMS-CRMP (Certified Risk Management Professional)
 - ✅ Full support with official exam structure
 - 5 domains: Risk Model Analysis, Strategy Design, Implementation, Risk Competency, Decision Support
-- 100 questions, 71% passing score, 120 minutes
+- 120 questions (100 scored, 20 unscored), 71% passing score, 120 minutes
 
 ### Coming Soon
 - ITPMP (IT Project Management Professional) - template included
